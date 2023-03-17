@@ -1,7 +1,6 @@
-import pkg from 'express';
-const { express } = pkg;
-import { path } from 'path'; 
-const app = express()
+import express from 'express';
+import path from 'path'; 
+const app = express(); 
 
 // #############################################################################
 // This configures static hosting for files in /public that have the extensions
@@ -18,6 +17,6 @@ app.use(express.static('build', options))
 
 const port = process.env.PORT || 3000
 
-app.listen(port, () => {
+app.listen(port, function () {
   console.log(`React app listening at http://localhost:${port}`)
 })
