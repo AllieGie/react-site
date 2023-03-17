@@ -13,6 +13,11 @@ var options = {
   maxAge: '1m',
   redirect: false
 }
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.use(express.static('build', options))
 
 const port = process.env.PORT || 3000
